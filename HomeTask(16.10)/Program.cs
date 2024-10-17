@@ -24,9 +24,9 @@
                 Console.WriteLine("");
                 Console.WriteLine("Zehmet olmasa qiymet daxil edin:");
 
-                int input = int.Parse(Console.ReadLine());
+                string input = (Console.ReadLine());
 
-                if (input == 1)
+                if (input == "1")
                 {
                     Console.Write("Kitabin adini daxil edin:");
                     string name = Console.ReadLine();
@@ -34,6 +34,8 @@
                     Console.WriteLine(" ");
 
                     Console.Write("Kitabin qiymetini daxil edin:");
+
+
                     double price = double.Parse(Console.ReadLine());
 
                     Console.WriteLine(" ");
@@ -51,17 +53,12 @@
                     Console.Write("Zehmet olmasa kitabin nomresini daxil edin:");
                     int i = int.Parse(Console.ReadLine());
 
-                    Book book = new Book(price, count, i, name, genre);
-
-                    library.AddBook(book);
-
-
                     Console.WriteLine(" ");
 
                     Console.WriteLine("Qeyd etdiyiniz kitab ugurla kitabxanaya elave olundu.");
                     continue;
                 }
-                else if (input == 2)
+                else if (input == "2")
                 {
                     Console.Write("Zehmet olmasa minimum qiymet daxil edin:");
                     double minPrice = double.Parse(Console.ReadLine());
@@ -91,7 +88,7 @@
 
                 }
 
-                else if (input == 3)
+                else if (input == "3")
                 {
                     Console.Write("Zehmet olmasa filterlemek istediyiniz janri daxil edin:");
                     string genre = Console.ReadLine();
@@ -111,13 +108,13 @@
 
 
                 }
-                else if (input == 4)
+                else if (input == "3")
                 {
                     library.ShowAllBooks();
                     Console.WriteLine(" ");
                 }
 
-                else if (input == 0)
+                else if (input == "0")
                 {
                     Console.WriteLine("Proqramdan cixilir.");
                     break;
